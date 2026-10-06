@@ -1,0 +1,45 @@
+{
+  "name": "fornada-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "expo": "~57.0.24",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.3.0",
+    "jest": "^30.0.0",
+    "jest-expo": "~57.0.0",
+    "react-test-renderer": "19.2.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "private": true,
+  "jest": {
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "collectCoverageFrom": [
+      "services/**/*.js",
+      "components/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 70,
+        "functions": 70,
+        "statements": 70,
+        "branches": 70
+      }
+    }
+  }
+}
